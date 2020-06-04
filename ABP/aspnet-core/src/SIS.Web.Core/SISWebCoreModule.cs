@@ -33,6 +33,8 @@ namespace SIS
             _appConfiguration = env.GetAppConfiguration();
         }
 
+      
+
         public override void PreInitialize()
         {
             Configuration.DefaultNameOrConnectionString = _appConfiguration.GetConnectionString(
@@ -65,6 +67,7 @@ namespace SIS
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(typeof(SISWebCoreModule).GetAssembly());
+
         }
 
         public override void PostInitialize()
@@ -72,5 +75,8 @@ namespace SIS
             IocManager.Resolve<ApplicationPartManager>()
                 .AddApplicationPartsIfNotAddedBefore(typeof(SISWebCoreModule).Assembly);
         }
+
+
+       
     }
 }

@@ -3,6 +3,7 @@ using Abp.Zero.EntityFrameworkCore;
 using SIS.Authorization.Roles;
 using SIS.Authorization.Users;
 using SIS.MultiTenancy;
+using SIS.Students.StudentInfo;
 
 namespace SIS.EntityFrameworkCore
 {
@@ -14,5 +15,8 @@ namespace SIS.EntityFrameworkCore
             : base(options)
         {
         }
+
+
+        public DbSet<StudentInformation> StudentInformation { get; set; }
     }
 }
