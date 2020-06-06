@@ -1,0 +1,17 @@
+.topnav a:hover {
+  border-bottom: 3px solid red;
+}
+.mynav {
+  background-color: #002147;
+  color: #ffffff;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.mat-button {
+  color: white;
+}
+.applynow {
+  color: #002147;
+  background-color: yellow;
+}
